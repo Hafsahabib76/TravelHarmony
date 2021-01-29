@@ -1,0 +1,126 @@
+<html>
+<head>
+<title> Travel Harmony </title>
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<div class="menu-wrap">
+    <div class="w3-top">
+      <div class="w3-bar w3-white w3-card" id="myNavbar">
+        <a href="index.html" class="w3-bar-item w3-button w3-wide">Travel Harmony</a>
+        <!-- Right-sided navbar links -->
+        <div class="w3-right w3-hide-small">
+          <a href="index.html" class="w3-bar-item w3-button">HOME</a>
+          <div class="w3-dropdown-hover w3-hide-small">
+            <button onclick="location.href='cities.html'" class="w3-button" title="Cities">CITIES <i class="fa fa-caret-down"></i></button>     
+            <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+              <a href="karachi.html" class="w3-bar-item w3-button">KARACHI</a>
+              <a href="lahore.html" class="w3-bar-item w3-button">LAHORE</a>
+              <a href="islamabad.html" class="w3-bar-item w3-button">ISLAMABAD</a>
+            </div>
+          </div>
+          <div class="w3-dropdown-hover w3-hide-small">
+            <button onclick="location.href='explore.html'" class="w3-button" title="Cities">EXPLORE <i class="fa fa-caret-down"></i></button>    
+            <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+              <a href="places.html" class="w3-bar-item w3-button">PLACES</a>
+              <a href="lakes.html" class="w3-bar-item w3-button">LAKES</a>
+              <a href="food.html" class="w3-bar-item w3-button">FOOD</a>
+            </div>
+          </div>
+          <a href="gallery.html" class="w3-bar-item w3-button"> GALLERY</a>
+          <a href="about.html" class="w3-bar-item w3-button"> ABOUT US</a>
+          <a href="contactus.html" class="w3-bar-item w3-button"> CONTACT US</a>
+        </div>
+      </div>
+    </div>
+</div>
+<br><br><br>
+
+<div id="display">
+<img class="slides" src="slide1.jpg"/>
+<img class="slides" src="slide2.jpg"/>
+<img class="slides" src="slide3.jpg"/>
+<img class="slides" src="slide4.jpg"/>
+<img class="slides" src="slide5.jpg"/>
+<button class="btn" onclick="plusIndex(-1)" id="btn1">&#10094 </button>
+<button class="btn" onclick="plusIndex(1)" id="btn2">&#10095 </button>
+</div>
+<br><br>
+<div id="d2">
+<a href="karachi.html" target="_blank"><img src="khi2.jpg" border="1" width="100%" height="200"></a>
+<h1>Karachi...<br>The City of Lights</h1>
+<p> Karachi has plenty of things to do, see and experience. The city is full of interesting places, where one can easily pass many hours enjoying the fun and entertainment. Enjoy shopping in a huge range of markets and bazaars, experience the vibrant nightlife or study the history of the area by seeing historical monuments and other several attractions in and around the city.</p>
+<p> For more :<a href="karachi.html" target="_blank"> view Karachi</a></p>
+</div>
+
+<div id="d1">
+<a href="https://en.wikipedia.org/wiki/Pakistan" target="_blank"><img src="pak.png" border="1" width="100%" height="200"></a>
+<h1>Islamic Republic of Pakistan...<br></h1>
+<p> Pakistan, officially the Islamic Republic of Pakistan, is a federal parliamentary republic in South Asia on the crossroads of Central Asia and Western Asia. It is the sixth-most populous country with a population exceeding 197 million people.In terms of area, it is the 33rd-largest country in the world.Pakistan has a 1,046-kilometre-long coastline along the Arabian Sea and the Gulf of Oman in the south and is bordered by India to the east, Afghanistan to the west, Iran to the southwest, and China in the far northeast, respectively. </p>
+<p> For more :<a href="https://en.wikipedia.org/wiki/Pakistan" target="_blank"> view Pakistan</a></p>
+</div>
+
+
+<div id="d2">
+<a href="lahore.html" target="_blank"><img src="lhr2.jpg" border="1" width="100%" height="200"></a>
+<h1> Lahore...<br> The City of Gardens</h1>
+Lahore is the major tourist place and second largest city of Pakistan after Karachi. Lahore has plenty of attraction being a historical place and has a lot of places for the tourists and travelers. Lahore is home to many of the renowned universities of Pakistan. Places to be seen in Lahore includes: Minar e Pakistan which is also a symbol of Lahore, Hiran Minar, Wagha border which connects India & Pakistan, Sozo water park and etc
+<p> For more :<a href="lahore.html" target="_blank">view Lahore</a></p>
+</div>
+
+
+<div id="d1">
+<a href="http://www.cda.gov.pk/about_islamabad/history/#ad-image-0" target="_blank"><img src="isl2.jpg" width="100%" height="200"></a>
+<h1> Islamabad...<br> The Beautiful City of Pakistan</h1>
+<p> The capital city of Pakistan, Islamabad is located in the northwest of the country on Potohar Plateau. This area has been significant in history for being a part of the crossroads of the Rawalpindi and the North West Frontier Province. The city was built in 1960 to replace Karachi as the Pakistani capital, which it has been since 1963. Due to Islamabad's proximity to Rawalpindi, they are considered sister cities.</p>
+<p> For more :<a href="islamabad.html" target="_blank"> view Islamabad</a></p>
+</div>
+
+<footer class="w3-center w3-grey">
+    <p class="footer-p">Copyright &#169; 2017 | Designed by Hafsa Habib</p>
+</footer>
+
+</body>
+
+<script>
+	var index= 1;
+
+	function plusIndex(n){
+	index=index+n;
+	showImage(index);
+	}
+	
+	showImage(1);
+	
+		function showImage(n){
+		var i;
+		var x = document.getElementsByClassName("slides");
+		if ( n > x.length) { index=1 };
+		if ( n < 1) { index=x.length };
+		for(i=0;i<x.length;i++)
+			{
+			x[i].style.display = "none";
+			}
+		x[index-1].style.display = "block";
+		}
+		autoSlide();
+		function autoSlide(){
+		var i;
+		var x = document.getElementsByClassName("slides");
+		for(i=0;i<x.length;i++)
+			{
+			x[i].style.display = "none";
+			}
+			if(index> x.length)(index=1)
+			x[index-1].style.display = "block";
+			index++;
+			setTimeout(autoSlide,5000);
+		}
+</script>
+
+</html>
+
